@@ -112,6 +112,7 @@ public class HelloController {
                 if (mFileManager.fileExists(mFileManager.getFilePath(txtFilePath.getText())))
                 {
                     mFileManager.deleteFile(txtFilePath.getText());
+                    btnCheckFileExistance.fire();
                 }
             }
         }
