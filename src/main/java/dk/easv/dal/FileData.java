@@ -5,15 +5,22 @@ import java.util.Scanner;
 
 public class FileData
 {
+    private File loadedFile = null;
+
+    public void setLoadedFile(File file)
+    {
+        loadedFile = file;
+    }
+
     public boolean fileExists(String filePath)
     {
         File file = new File(filePath);
         return file.exists();
     }
 
-    public String getFilePath(File file)
+    public String getFilePath()
     {
-        return file.getAbsolutePath();
+        return loadedFile.getAbsolutePath();
     }
 
     public String getFilePath(String filePath)

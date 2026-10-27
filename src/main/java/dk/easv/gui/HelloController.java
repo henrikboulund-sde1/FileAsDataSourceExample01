@@ -125,13 +125,14 @@ public class HelloController {
         fileChooser.getExtensionFilters().add(extFilter);
 
         File file = fileChooser.showOpenDialog(null);
+        mFileManager.setLoadedFile(file);
         if(file != null)
         {
-            boolean exists = mFileManager.fileExists(mFileManager.getFilePath(file));
+            boolean exists = mFileManager.fileExists(mFileManager.getFilePath());
 
             if (exists)
             {
-                txtFilePath.setText(mFileManager.getFilePath(file));
+                txtFilePath.setText(mFileManager.getFilePath());
             }
         }
     }

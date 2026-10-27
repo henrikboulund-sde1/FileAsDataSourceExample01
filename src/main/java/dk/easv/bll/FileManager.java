@@ -8,14 +8,19 @@ public class FileManager
 {
     FileData data = new FileData();
 
+    public void setLoadedFile(File file)
+    {
+        data.setLoadedFile(file);
+    }
+
     public boolean  fileExists(String filePath)
     {
         return data.fileExists(filePath);
     }
 
-    public String getFilePath(File file)
+    public String getFilePath()
     {
-        return data.getFilePath(file);
+        return data.getFilePath();
     }
 
     public String getFilePath(String filePath)
